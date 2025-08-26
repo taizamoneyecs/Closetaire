@@ -10,18 +10,21 @@ class GroqAPI:
         self.base_url = "https://api.groq.com/openai/v1/chat/completions"  # Groq endpoint
     
     def get_outfit_suggestion(self, weather_condition, event_type, temperature):
-        """Get AI-powered outfit suggestions using Groq's free API"""
+       
         
         prompt = f"""
-        As a personal fashion assistant, suggest 3 appropriate outfits for:
-        - Event: {event_type}
-        - Weather: {weather_condition}
-        - Temperature: {temperature}°C
+            As a personal fashion assistant, suggest 3 appropriate outfits for:
+            - Event: {event_type}
+            - Weather: {weather_condition}
+            - Temperature: {temperature}°C
 
-        Provide diverse, practical suggestions with brief explanations.
-        Format clearly without emojis.
-        """
-        
+            Provide practical, weather-appropriate suggestions. Consider:
+            - Layering for temperature changes
+            - Fabric choices for comfort
+            - Footwear suitability for conditions
+
+            Format clearly with numbered suggestions and brief explanations.
+            """
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"
