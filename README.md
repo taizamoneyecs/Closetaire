@@ -9,7 +9,7 @@ Closetaire is an outfit recommendation program built with React Native and Flask
 -  Frontend powered by React Native
 -  Backend built with Flask API
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** React Native / Expo  
 - **Backend:** Python, Flask, REST API  
 - **AI:** OpenAI API integration (optional, fallback included)  
